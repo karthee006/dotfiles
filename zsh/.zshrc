@@ -65,7 +65,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls='lsd'
 alias vim='nvim'
 alias c='clear'
-alias inv=' kwrite $(fzf -m --preview="bat --color=always {}")'
+alias inv=' nvim $(fzf -m --preview="bat --c:color=always {}")'
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -73,3 +73,5 @@ eval "$(zoxide init --cmd cd zsh)"
 
 #Neovim 
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
+export GTK_USE_PORTAL=1
